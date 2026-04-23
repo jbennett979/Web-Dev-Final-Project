@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Jes's Portfolio Website</h1>
+        <!-- Navigation Bar -->
+        <nav>
+        <div class="navbar">
+            <a href="index.html" class="active">
+                <h1>Home</h1>
+            </a>
+
+            <a href="#">
+                <h1>About</h1>
+            </a>
+            
+            <a href="projects.html">
+                <h1>Projects</h1>
+            </a>
+
+            <a href="contact.html">
+                <h1>Contact</h1>
+            </a>
+        </div>
+        </nav>
+    </header>
+    <h2 id="aboutJ">About: </h2>
+    <p id="aboutBS">I'm in my last semester of getting my </p>
+    <p id="aboutMAT">Next year I'm getting my </p>
+    <p id="aboutC">I want to be a </p>
+    <p id="aboutI">My interests include </p>
+    <p id="aboutH">My hobbies include </p>
+    <script>
+        const jsonString = '{"name": "Jes Bennett", "BS": "Bachelors of Science in Computer Science", "master": "Masters of Arts in Teaching", "career": "teacher!", "interests": "cats, birds, music", "hobbies": "banjo, reading, walking"}';
+        const obj = JSON.parse(jsonString);
+        document.getElementById("aboutJ").textContent += obj.name;
+        document.getElementById("aboutBS").textContent += obj.BS;
+        document.getElementById("aboutMAT").textContent += obj.master;
+        document.getElementById("aboutC").textContent += obj.career;
+        document.getElementById("aboutI").textContent += obj.interests;
+        document.getElementById("aboutH").textContent += obj.hobbies;
+    </script>
+</body>
+</html>

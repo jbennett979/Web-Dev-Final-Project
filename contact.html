@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Jes's Portfolio Website</h1>
+        <!-- Navigation Bar -->
+        <nav>
+        <div class="navbar">
+            <a href="index.html" class="active">
+                <h1>Home</h1>
+            </a>
+
+            <a href="about.html">
+                <h1>About</h1>
+            </a>
+            
+            <a href="projects.html">
+                <h1>Projects</h1>
+            </a>
+
+            <a href="#">
+                <h1>Contact</h1>
+            </a>
+        </div>
+        </nav>
+    </header>
+    <div class="contactContainer">
+        <div id="formBackground">
+            <h2>My Information</h2>
+            <p>Email: jabnntt999@gmail.com</p>
+            <p>Phone: 302-518-4943</p>
+            <p>Github: <a href="https://github.com/jbennett979" target="_blank">jbennett979</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/jes-bennettcs/" target="_blank">jes-bennettcs</a></p>
+        </div>
+        <div id="formBackground">
+            <h2>Email Me</h2>
+            <form action="confirmation.html" method="GET">
+                <!-- TODO: Add proper label and input connection -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required/>
+                <br>
+                <br>
+                
+                <!-- TODO: Create a dropdown for flavor selection -->
+                <label for="subject">Reason for Contact:</label>
+                <select name="subject" id="subject" required>
+                    <!-- Add options here -->
+                    <option value="professional inquiry">Professional Inquiry</option>
+                    <option value="teacher questions">Teacher Questions</option>
+                    <option value="cs questions">CS Questions</option>
+                </select>
+                <br>
+                <br>
+                <label for="message">Message to Me:</label>
+                <br>
+                <textarea id="message" name="message" rows="4" cols="50" required></textarea>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

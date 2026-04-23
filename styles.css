@@ -1,0 +1,127 @@
+/*
+color palette:
+#0474BA dark blue
+#00A7E1 light blue
+#EBEBEB white
+#FFA630 light orange
+#F17720 dark orange
+
+#ff7f11 dark orange
+#ffd6a5 light orange
+#0a2540 dark blue
+#1f7a8c teal
+#EBEBEB white
+ */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+body {
+    background-color:#0a2540;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    display: flex;
+    background-color: #ffd6a5;
+    overflow: auto;
+    margin-bottom: 20px;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+    color: #1f7a8c;
+    padding: 0px;
+    text-decoration: none;
+    text-align: center;
+    flex: 30%;
+}
+
+.navbar a:hover {
+    background-color: #f0ba7a;
+    color: #0474BA;
+    scale: 105%
+}
+.navbar .active {
+    text-decoration: underline;
+    font-weight: bold;
+}
+h1, h2 {
+    color: #1f7a8c;
+    font-family: 'Press Start 2P';
+    animation-name: titleAnimation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+p {
+    color: #1f7a8c;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+}
+label {
+    color: #1f7a8c;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+}
+#formBackground {
+    background-color: #ffd6a5;
+    font-size: larger;
+    width: 60%;
+}
+button {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #ff7f11;
+    color: #1f7a8c;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 20px;
+}
+img {
+    height: 60vh;
+    width: auto;
+}
+.flexContainer {
+    display: flex;
+    background-color: #0a2540;
+    flex-direction: column;
+    align-items: center;
+}
+.flexContainer div {
+    background-color: #ffd6a5;
+    width: 80%;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+}
+.contactContainer {
+    display: flex;
+    background-color: #0a2540;
+    align-items: center;
+    align-items: stretch;
+}
+.contactContainer div {
+    background-color: #ffd6a5;
+    width: 100px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+}
+#projectH {
+    color: #1f7a8c;
+    font-family: 'Press Start 2P';
+    animation-name: titleAnimation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes titleAnimation {
+  from {color: #1f7a8c;}
+  to {color: #ff7f11;}
+}
+@media screen and (max-width: 700px) {.navbar { flex-direction: column; } }

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Message Confirmed!</h1>
+    <p id="nameText">placeholder</p>
+    <p id="subjectText">placeholder</p>
+    <p>Dear Jes,</p>
+    <p id="messageText"></p>
+    <p>Best,</p>
+    <p id="signOff">placeholder</p>
+    <form action="index.html">
+        <button type="submit">Back to Portfolio?</button>
+    </form>
+
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get("name");
+        const saved = localStorage.getItem("name");
+        if (!saved) {
+            localStorage.setItem("name", name);
+        } else {
+            alert("Welcome back, " + saved + "!");
+        }
+        const subject = urlParams.get("subject");
+        const message = urlParams.get("message");
+        document.getElementById("nameText").textContent = `Thank you, ${name}!, here is an email template you can send to jabnntt999@gmail.com:`;
+        document.getElementById("subjectText").textContent = `Subject: ${subject}`;
+        document.getElementById("messageText").textContent = `${message}`;
+        document.getElementById("signOff").textContent = `${name}`;
+    </script>
+</body>
+</html>

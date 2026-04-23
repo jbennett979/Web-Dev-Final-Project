@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Jes's Portfolio Website</h1>
+        <!-- Navigation Bar -->
+        <nav>
+        <div class="navbar">
+            <a href="#" class="active">
+                <h1>Home</h1>
+            </a>
+
+            <a href="about.html">
+                <h1>About</h1>
+            </a>
+            
+            <a href="projects.html">
+                <h1>Projects</h1>
+            </a>
+
+            <a href="contact.html">
+                <h1>Contact</h1>
+            </a>
+        </div>
+        </nav>
+    </header>
+    <section>
+        <h2>Important Photos to Me:</h2>
+        <img src="images/solo.JPG" id="cyclePhotos">
+        <br>
+        <button id="nextButton">Next Photo</button>
+
+        <script>
+            document.getElementById("nextButton").addEventListener("click", cycle_photos)
+            const imgs = ["images/solo.JPG", "images/hike.jpg", "images/leanstack.jpeg", "images/adventure.JPG",
+            "images/alex.jpg", "images/coffee.JPG", "images/comp.JPG", "images/explain.jpg", "images/grandma.jpg", "images/jo.jpg",
+            "images/mime1.JPG", "images/noyce.JPG", "images/paperp.jpg", "images/sad_mime.jpg", "images/shells.jpg", "images/shrimp.jpg",
+            "images/shrimp2.jpg", "images/sleepy.jpg", "images/thumbsup.jpg", "images/tomlook.jpg", "images/tomtreble.jpg", "images/tt.jpg",
+            "images/vet.jpeg", "images/walkin.jpg", "images/skate.jpg"]
+            function cycle_photos() {
+                let photo = document.getElementById("cyclePhotos").src;
+                console.log(photo);
+                for(let i = 0; i < imgs.length; i++) {
+                    if(photo.includes(imgs[i])) {
+                        if(imgs[i] != "images/skate.jpg") {
+                            document.getElementById("cyclePhotos").src = imgs[i+1];
+                        } else {
+                            document.getElementById("cyclePhotos").src = imgs[0];
+                        }    
+                    }
+                }
+            }
+        </script>
+    </section>
+</body>
+</html>
